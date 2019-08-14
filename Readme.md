@@ -6,6 +6,12 @@ Intro teorica
 - El caso 2 es mas prolijo porque tiene un WORKDIR que le dice donde pararse
 - El RUN del Dockerfile se ejecuta en el momento del bildeo
 
+NOTAS: 
+
+para debugear
+- exec
+- docker log
+
 ## section 1:
 
 Construir una imagen de docker con python3 que corre con CMD un echo
@@ -130,6 +136,7 @@ para hacer un hot reload de los cambios
 
 > docker build . -t docker_workshop_6
 
+$PWD me da la ruta donde estoy parado
 > docker run --name my_flask_app_with_reload -p 0.0.0.0:5000:5000 -v $PWD/app:/app docker_workshop_6
 
 > curl 127.0.0.1:5000
